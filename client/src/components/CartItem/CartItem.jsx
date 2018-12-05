@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import "./CartItem.css";
 import PropTypes from "prop-types";
+import Package from "./package.jpg"
 
 const CartItem = props => {
   return (
@@ -9,22 +10,13 @@ const CartItem = props => {
         <td>
           {" "}
           <img
-            src={props.photo}
+            src={Package}
             alt={props.name}
             className="Cart-Item-Photo"
           />{" "}
         </td>
         <td>{props.name}</td>
-        <td>
-          <button onClick={props.removeItem} className="Quantity-Button">
-            -
-          </button>
-          <span className="Cart-Item-Quantity">{props.quantity}</span>
-          <button onClick={props.addItem} className="Quantity-Button">
-            +
-          </button>
-
-        </td>
+        <td>{props.weight}</td>
         <td>${props.price}</td>
         <td><i className="fa fa-times" onClick={props.removeWholeItem} style={{ color: 'red', cursor: 'pointer' }}></i></td>
       </tr>
@@ -35,9 +27,8 @@ const CartItem = props => {
 
 CartItem.propTypes = {
   name: PropTypes.string.isRequired,
-  photo: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  quantity: PropTypes.number.isRequired,
+  quantity: PropTypes.string.isRequired,
   addItem: PropTypes.func.isRequired,
   removeItem: PropTypes.func.isRequired,
 }

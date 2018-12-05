@@ -4,6 +4,13 @@
   justify-content: space-around;
   padding: 1.5rem;
   font-size: 14px;
+  position: fixed;
+  width: 100%;
+  background: #fff;
+  padding-bottom: 65px;
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(0,3,51,0.04);
+  box-shadow: 10px 10px 5px -6px rgba(0,3,51,0.04);
+  z-index: 99999999;
 }
 
 .Cart-Info {

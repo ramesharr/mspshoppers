@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const totalPrice = cart => {
   return cart.reduce(
-    (accum, product) => accum + product.price * product.quantity,
+    (accum, product) => accum + product.price,
     0
   );
 };

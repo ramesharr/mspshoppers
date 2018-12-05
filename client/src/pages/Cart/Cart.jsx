@@ -15,7 +15,7 @@ const sort = items => {
 
 const totalPrice = cart => {
   return cart.reduce(
-    (accum, product) => accum + product.price * product.quantity,
+    (accum, product) => accum + product.price,
     0
   );
 };
@@ -44,7 +44,7 @@ class Cart extends Component {
               <tr>
                 <th>Photo</th>
                 <th>Name</th>
-                <th>Quantity</th>
+                <th>Weight</th>
                 <th>Price / Unit</th>
                 <th></th>
               </tr>

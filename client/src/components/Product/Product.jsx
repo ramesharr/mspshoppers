@@ -27,9 +27,9 @@ const Product = props => {
 
 Product.propTypes = {
   name: PropTypes.string.isRequired,
-  photo: PropTypes.string.isRequired,
   price: PropTypes.number.isRequired,
-  addToCart: PropTypes.func.isRequired
+  addToCart: PropTypes.func.isRequired,
+  quantity: PropTypes.string.isRequired
 };
 
 export default Product;

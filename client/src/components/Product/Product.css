@@ -8,10 +8,6 @@
   .Product-Wrapper { width: 33.33% }
 }
 
-@media(max-width: 1400px) {
-  .Product-Wrapper { width: 50% }
-}
-
 @media(max-width: 900px) {
   .Product-Wrapper { width: 100% }
 }

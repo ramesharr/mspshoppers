@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Checkout.css";
 import Modal from "react-modal";
 import BuySomething from "../../ui/BuySomething/BuySomething";
+import helpers from './helper';
 
 import { connect } from 'react-redux';
 
@@ -42,7 +43,13 @@ class Checkout extends Component {
 
     if (!this.props.cart.length)
       return <BuySomething message="Cart is empty to checkout!" />
-
+    console.log(this.props.cart);
+    let PriceFlatten=[];
+    let WeightFlatten=[];
+    this.props.cart.forEach((prices)=>PriceFlatten.push(prices.price));
+    this.props.cart.forEach((quantities)=>WeightFlatten.push(quantities.quantity));
+    console.log(PriceFlatten);
+    console.log(WeightFlatten);
     return (
       <div className="Checkout-Wrapper">
         <h1 className="Checkout-Title">Checkout</h1>
@@ -85,7 +92,7 @@ class Checkout extends Component {
         >
           <i className="fa fa-times Close-Modal" onClick={this.closeModal}></i>
           <p style={{ color: "#000", padding: '20px' }}>
-            Thanks <strong>{this.state.name}</strong> for testing my simple Online Shopping Cart!
+            Thanks <strong>{this.state.name}</strong> for testing my simple Online Shopping Application!
           </p>
         </Modal>
       </div>
